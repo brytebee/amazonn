@@ -9,7 +9,7 @@ export default function Home() {
         <h1>Products</h1>
         <Grid container spacing={3}>
           {data.products.map((product) => (
-            <Grid item md={4} key={product.name}>
+            <Grid item sm={4} md={3} lg={2} key={product.name}>
               <Card>
                 <CardActionArea>
                   <CardMedia

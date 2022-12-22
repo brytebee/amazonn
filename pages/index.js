@@ -1,4 +1,13 @@
-import { Card, CardActionArea, CardMedia, Grid } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
 import { Layout } from "../components/Layout";
 import data from "../utils/data";
 
@@ -17,7 +26,14 @@ export default function Home() {
                     image={product.image}
                     title={product.name}
                   ></CardMedia>
+                  <CardContent>
+                    <Typography>{product.name}</Typography>
+                  </CardContent>
                 </CardActionArea>
+                <CardActions>
+                  <Typography>${product.price}</Typography>
+                  <Button color="primary">Add to Cart</Button>
+                </CardActions>
               </Card>
             </Grid>
           ))}
